@@ -15,10 +15,10 @@ const projects = [
       "SiliconBrainsAI built a streaming pipeline that normalizes telemetry from multiple bus protocols, applies statistical + ML-based anomaly scoring, and visualizes subsystem health on a live mission-control dashboard.",
     architecture:
       "Kafka-based ingestion → feature store → ensemble anomaly detectors (isolation forest + LSTM autoencoder) → PostgreSQL/TimescaleDB → real-time WebSocket dashboard.",
-    aiModels: ["Isolation Forest", "LSTM Autoencoder", "Gradient Boosted Trees"],
+    aiModels: "Isolation Forest, LSTM Autoencoder, Gradient Boosted Trees",
     results:
       "Reduced false-positive alerts by 63% and cut anomaly detection latency from minutes to under 4 seconds in simulated LEO telemetry streams.",
-    techStack: ["Python", "PyTorch", "Kafka", "TimescaleDB", "FastAPI", "React"],
+    techStack: "Python, PyTorch, Kafka, TimescaleDB, FastAPI, React",
     githubUrl: "https://github.com/siliconbrainsai/satellite-telemetry-analytics",
     featured: true,
   },
@@ -34,9 +34,9 @@ const projects = [
       "A hybrid fault classifier combining physics-informed features with deep representation learning, deployable both on ground infrastructure and resource-constrained flight computers.",
     architecture:
       "Sensor fusion layer → physics-informed feature extraction → CNN-based classifier → confidence-calibrated output → explainability layer (SHAP).",
-    aiModels: ["1D-CNN", "Physics-Informed Neural Network", "SHAP Explainability"],
+    aiModels: "1D-CNN, Physics-Informed Neural Network, SHAP Explainability",
     results: "94.2% fault classification accuracy across 12 subsystem fault classes in simulation testbeds.",
-    techStack: ["TensorFlow", "C++", "Edge TPU", "Python", "MATLAB/Simulink"],
+    techStack: "TensorFlow, C++, Edge TPU, Python, MATLAB/Simulink",
     githubUrl: "https://github.com/siliconbrainsai/ai-fault-detection",
     featured: true,
   },
@@ -52,9 +52,9 @@ const projects = [
       "A fleet-scale time-series forecasting system that models degradation curves per component class and issues maintenance-window recommendations.",
     architecture:
       "Historical telemetry warehouse → temporal feature engineering → Temporal Fusion Transformer → maintenance scheduling optimizer.",
-    aiModels: ["Temporal Fusion Transformer", "Survival Analysis Models"],
+    aiModels: "Temporal Fusion Transformer, Survival Analysis Models",
     results: "Forecasts degradation trends 30-45 days ahead with mean absolute error under 6%.",
-    techStack: ["Python", "PyTorch Forecasting", "PostgreSQL", "Airflow"],
+    techStack: "Python, PyTorch Forecasting, PostgreSQL, Airflow",
     githubUrl: "https://github.com/siliconbrainsai/predictive-maintenance",
     featured: false,
   },
@@ -68,9 +68,9 @@ const projects = [
     solution:
       "Ensemble regression models trained on degradation trajectories, validated against accelerated life-testing datasets.",
     architecture: "Degradation dataset → feature extraction → ensemble RUL regressors → uncertainty quantification.",
-    aiModels: ["XGBoost", "Bayesian Neural Networks"],
+    aiModels: "XGBoost, Bayesian Neural Networks",
     results: "RUL prediction within ±8% of ground-truth on reaction wheel degradation benchmarks.",
-    techStack: ["Python", "Scikit-learn", "XGBoost", "NumPyro"],
+    techStack: "Python, Scikit-learn, XGBoost, NumPyro",
     githubUrl: "https://github.com/siliconbrainsai/rul-prediction",
     featured: false,
   },
@@ -84,9 +84,9 @@ const projects = [
     solution:
       "A model-agnostic explainability layer providing feature attribution, counterfactuals, and natural-language rationale generation for every prediction.",
     architecture: "Model wrapper → SHAP/LIME attribution → counterfactual generator → rationale summarizer (LLM).",
-    aiModels: ["SHAP", "LIME", "LLM-based Rationale Generator"],
+    aiModels: "SHAP, LIME, LLM-based Rationale Generator",
     results: "Adopted across all SiliconBrainsAI production models as a mandatory audit layer.",
-    techStack: ["Python", "SHAP", "LIME", "Transformers"],
+    techStack: "Python, SHAP, LIME, Transformers",
     githubUrl: "https://github.com/siliconbrainsai/explainable-ai",
     featured: false,
   },
@@ -100,9 +100,9 @@ const projects = [
     solution:
       "A quantized, deterministic inference runtime with bounded memory and execution-time guarantees, built for TinyML deployment on spacecraft.",
     architecture: "Model quantization pipeline → deterministic runtime → watchdog-supervised inference scheduler.",
-    aiModels: ["Quantized CNNs", "TinyML Decision Trees"],
+    aiModels: "Quantized CNNs, TinyML Decision Trees",
     results: "Achieved sub-50ms inference latency within a 2MB memory budget on representative flight hardware.",
-    techStack: ["C", "TensorFlow Lite Micro", "RTOS", "Rust"],
+    techStack: "C, TensorFlow Lite Micro, RTOS, Rust",
     githubUrl: "https://github.com/siliconbrainsai/onboard-ai",
     featured: true,
   },
@@ -116,9 +116,9 @@ const projects = [
     solution:
       "A physics + ML hybrid digital twin synchronized with live telemetry, enabling simulation of contingency scenarios and control-policy validation.",
     architecture: "Live telemetry sync → physics simulation core → ML residual correction models → 3D visualization layer (Three.js).",
-    aiModels: ["Residual Learning Models", "Kalman Filters + Neural Correction"],
+    aiModels: "Residual Learning Models, Kalman Filters + Neural Correction",
     results: "Digital twin state tracking error kept under 2% relative to ground-truth telemetry.",
-    techStack: ["Python", "Three.js", "WebSocket", "Simulink", "Next.js"],
+    techStack: "Python, Three.js, WebSocket, Simulink, Next.js",
     githubUrl: "https://github.com/siliconbrainsai/digital-twin-satellite",
     featured: true,
   },
@@ -132,9 +132,9 @@ const projects = [
     solution:
       "A hierarchical reinforcement-learning based decision engine with hard safety constraints and human-verifiable action justification.",
     architecture: "State estimator → constrained RL policy → safety verifier → action executor with ground override.",
-    aiModels: ["Constrained Reinforcement Learning", "Safety-Verified Policy Networks"],
+    aiModels: "Constrained Reinforcement Learning, Safety-Verified Policy Networks",
     results: "Reduced anomaly response time from ground-loop minutes to onboard milliseconds in simulation.",
-    techStack: ["Python", "Ray RLlib", "C++", "Formal Verification Tools"],
+    techStack: "Python, Ray RLlib, C++, Formal Verification Tools",
     githubUrl: "https://github.com/siliconbrainsai/autonomous-decision-engine",
     featured: false,
   },
@@ -150,9 +150,9 @@ const projects = [
       "A unified AI platform that fuses telemetry analytics, fault detection, RUL prediction, digital twin simulation, and autonomous decisioning into one mission-control-grade system.",
     architecture:
       "Unified data fabric → multi-model AI orchestration layer → digital twin simulation → autonomous decision engine → mission control UI.",
-    aiModels: ["Ensemble of all SiliconBrainsAI models", "Multi-agent Orchestration"],
+    aiModels: "Ensemble of all SiliconBrainsAI models, Multi-agent Orchestration",
     results: "Deployed in simulation across 3 representative LEO mission profiles with end-to-end autonomous anomaly handling.",
-    techStack: ["Next.js", "Python", "PyTorch", "Kubernetes", "PostgreSQL", "Three.js"],
+    techStack: "Next.js, Python, PyTorch, Kubernetes, PostgreSQL, Three.js",
     githubUrl: "https://github.com/siliconbrainsai/autonomous-satellite-health-management",
     featured: true,
   },
@@ -166,7 +166,7 @@ const blogPosts = [
     content:
       "As missions push further from Earth, ground-loop decision-making becomes a liability rather than a safeguard. This post explores the architectural principles behind deterministic onboard inference and why TinyML is becoming mission-critical infrastructure.",
     category: "Space",
-    tags: ["Edge AI", "TinyML", "Autonomy"],
+    tags: JSON.stringify(["Edge AI", "TinyML", "Autonomy"]),
     readTimeMin: 6,
   },
   {
@@ -176,7 +176,7 @@ const blogPosts = [
     content:
       "Telemetry anomaly detection is deceptively hard: seasonality, multi-modal sensor drift, and rare fault classes all complicate naive approaches. We break down the tradeoffs between classical and deep-learning methods.",
     category: "Machine Learning",
-    tags: ["Anomaly Detection", "Time Series"],
+    tags: JSON.stringify(["Anomaly Detection", "Time Series"]),
     readTimeMin: 8,
   },
   {
@@ -186,7 +186,7 @@ const blogPosts = [
     content:
       "A digital twin is only as good as its synchronization with reality. This post covers our hybrid physics+ML approach and the pitfalls of pure data-driven twins.",
     category: "Research",
-    tags: ["Digital Twin", "Simulation"],
+    tags: JSON.stringify(["Digital Twin", "Simulation"]),
     readTimeMin: 7,
   },
   {
@@ -196,7 +196,7 @@ const blogPosts = [
     content:
       "Black-box predictions are unacceptable when a satellite's health is on the line. We walk through how we layer SHAP, counterfactuals, and rationale generation into every production model.",
     category: "AI",
-    tags: ["Explainable AI", "Trust"],
+    tags: JSON.stringify(["Explainable AI", "Trust"]),
     readTimeMin: 5,
   },
   {
@@ -206,7 +206,7 @@ const blogPosts = [
     content:
       "Space-based computer vision faces constraints rarely seen terrestrially. We discuss radiation-induced noise, dynamic range extremes, and onboard compute limits.",
     category: "Computer Vision",
-    tags: ["Computer Vision", "Space"],
+    tags: JSON.stringify(["Computer Vision", "Space"]),
     readTimeMin: 6,
   },
   {
@@ -216,7 +216,7 @@ const blogPosts = [
     content:
       "From schema validation to backpressure handling, we share the Python patterns that keep our telemetry pipelines robust at scale.",
     category: "Python",
-    tags: ["Python", "Data Engineering"],
+    tags: JSON.stringify(["Python", "Data Engineering"]),
     readTimeMin: 9,
   },
 ];
@@ -225,7 +225,7 @@ const publications = [
   {
     title: "Physics-Informed Deep Learning for Spacecraft Fault Classification",
     type: "Research Paper",
-    authors: ["SiliconBrainsAI Research Team"],
+    authors: JSON.stringify(["SiliconBrainsAI Research Team"]),
     venue: "IAC (International Astronautical Congress)",
     year: 2025,
     abstract:
@@ -235,7 +235,7 @@ const publications = [
   {
     title: "Digital Twins for LEO Satellite Health Management: A Hybrid Approach",
     type: "Conference Paper",
-    authors: ["SiliconBrainsAI Research Team"],
+    authors: JSON.stringify(["SiliconBrainsAI Research Team"]),
     venue: "IEEE Aerospace Conference",
     year: 2025,
     abstract:
@@ -245,7 +245,7 @@ const publications = [
   {
     title: "TinyML for Deterministic Onboard Inference in Radiation-Tolerant Systems",
     type: "Technical Whitepaper",
-    authors: ["SiliconBrainsAI Engineering Team"],
+    authors: JSON.stringify(["SiliconBrainsAI Engineering Team"]),
     venue: null,
     year: 2024,
     abstract:
@@ -255,7 +255,7 @@ const publications = [
   {
     title: "Case Study: Reducing False Positive Alerts in Telemetry Monitoring by 63%",
     type: "Case Study",
-    authors: ["SiliconBrainsAI"],
+    authors: JSON.stringify(["SiliconBrainsAI"]),
     venue: null,
     year: 2024,
     abstract:
