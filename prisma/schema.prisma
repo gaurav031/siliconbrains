@@ -1,0 +1,79 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model ContactSubmission {
+  id                String   @id @default(cuid())
+  name              String
+  company           String?
+  email             String
+  country           String?
+  subject           String
+  message           String
+  collaborationType String   @default("RESEARCH")
+  createdAt         DateTime @default(now())
+  status            String   @default("NEW")
+
+  @@index([email])
+  @@index([createdAt])
+}
+
+model Project {
+  id           String   @id @default(cuid())
+  slug         String   @unique
+  title        String
+  category     String
+  overview     String
+  problem      String
+  solution     String
+  architecture String
+  aiModels     String
+  results      String
+  techStack    String
+  githubUrl    String?
+  coverImage   String?
+  featured     Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model BlogPost {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  title       String
+  excerpt     String
+  content     String
+  category    String
+  tags        String
+  author      String   @default("SiliconBrainsAI Team")
+  coverImage  String?
+  published   Boolean  @default(true)
+  publishedAt DateTime @default(now())
+  readTimeMin Int      @default(5)
+
+  @@index([category])
+  @@index([slug])
+}
+
+model Publication {
+  id        String   @id @default(cuid())
+  title     String
+  type      String
+  authors   String
+  venue     String?
+  year      Int
+  abstract  String
+  link      String?
+  createdAt DateTime @default(now())
+}
+
+model NewsletterSubscriber {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  createdAt DateTime @default(now())
+}
