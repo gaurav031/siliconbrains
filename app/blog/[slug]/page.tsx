@@ -61,11 +61,11 @@ export default async function BlogDetailPage({
         <div className="text-[var(--color-text)] leading-relaxed whitespace-pre-line">{post.content}</div>
 
         <div className="flex flex-wrap gap-2 mt-10">
-          {post.tags.map((t: string) => (
-            <span key={t} className="text-xs bg-white/5 border border-[var(--color-border)] rounded-full px-3 py-1">
-              #{t}
-            </span>
-          ))}
+          {(Array.isArray(post.tags) ? post.tags : (typeof post.tags === 'string' ? post.tags.split(',') : [])).map((t: string) => (
+  <span key={t} className="text-xs bg-white/5 border border-[var(--color-border)] rounded-full px-3 py-1">
+    #{t}
+  </span>
+))}
         </div>
       </div>
     </div>
