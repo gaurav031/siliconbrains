@@ -88,17 +88,18 @@ export default async function ProjectDetailPage({
             <GlassCard>
               <h3 className="font-semibold text-lg mb-4">AI Models</h3>
               <div className="flex flex-wrap gap-2">
-                {project.aiModels.map((m: string) => (
+                {(Array.isArray(project.aiModels) ? project.aiModels : (typeof project.aiModels === 'string' ? (project.aiModels as string).split(',') : [])).map((m: string) => (
                   <span key={m} className="text-xs bg-white/5 border border-[var(--color-border)] rounded-full px-3 py-1">
                     {m}
                   </span>
                 ))}
               </div>
             </GlassCard>
+
             <GlassCard>
               <h3 className="font-semibold text-lg mb-4">Technology Stack</h3>
               <div className="flex flex-wrap gap-2">
-                {project.techStack.map((t: string) => (
+                {(Array.isArray(project.techStack) ? project.techStack : (typeof project.techStack === 'string' ? (project.techStack as string).split(',') : [])).map((t: string) => (
                   <span key={t} className="text-xs bg-white/5 border border-[var(--color-border)] rounded-full px-3 py-1">
                     {t}
                   </span>
