@@ -28,9 +28,9 @@ export function SectionHeading({
   );
 }
 
-export function Badge({ children }: { children: ReactNode }) {
+export function Badge({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
-    <span className="inline-flex items-center text-xs font-medium px-3 py-1 rounded-full bg-[var(--color-surface)] border border-[var(--color-border)] text-[var(--color-text-muted)]">
+    <span className={`inline-flex items-center text-xs font-medium px-3 py-1 rounded-full bg-[var(--color-surface)] border border-[var(--color-border)] text-[var(--color-text-muted)] ${className}`}>
       {children}
     </span>
   );
