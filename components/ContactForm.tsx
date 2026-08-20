@@ -16,7 +16,7 @@ const collaborationTypes = [
 ];
 
 const inputClass =
-  "w-full bg-white/5 border border-[var(--color-border)] rounded-xl px-4 py-3 text-sm outline-none focus:border-[var(--color-primary)] transition-colors";
+  "w-full bg-[var(--color-surface)] border border-[var(--color-border)] rounded-xl px-4 py-3 text-sm outline-none focus:border-[var(--color-primary)] transition-colors";
 
 export default function ContactForm() {
   const [serverError, setServerError] = useState<string | null>(null);
@@ -35,20 +35,24 @@ export default function ContactForm() {
   async function onSubmit(values: ContactFormValues) {
     setServerError(null);
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(values),
-      });
-      const data = await res.json();
-      if (!res.ok) {
-        setServerError(data.message || "Something went wrong. Please try again.");
-        return;
-      }
+      const text = `*New Website Inquiry*
+Name: ${values.name}
+Email: ${values.email}
+${values.company ? `Company: ${values.company}` : ""}
+${values.country ? `Country: ${values.country}` : ""}
+Collaboration Type: ${values.collaborationType}
+Subject: ${values.subject}
+Message: ${values.message}`;
+
+      const encodedText = encodeURIComponent(text.trim());
+      const waUrl = `https://wa.me/6304001323?text=${encodedText}`;
+
+      window.open(waUrl, "_blank");
+      
       setSuccess(true);
       reset();
     } catch {
-      setServerError("Network error. Please try again.");
+      setServerError("Could not open WhatsApp. Please try again.");
     }
   }
 
@@ -97,7 +101,7 @@ export default function ContactForm() {
         <label className="text-sm font-medium mb-1.5 block">Collaboration Type *</label>
         <select {...register("collaborationType")} className={inputClass}>
           {collaborationTypes.map((c) => (
-            <option key={c.value} value={c.value} className="bg-[#0a0e1a]">
+            <option key={c.value} value={c.value} className="bg-[var(--color-bg-elevated)]">
               {c.label}
             </option>
           ))}

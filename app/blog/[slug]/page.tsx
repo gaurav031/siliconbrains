@@ -37,7 +37,7 @@ export default async function BlogDetailPage({
   return (
     <div className="pt-32 pb-20">
       <div className="container-max max-w-3xl">
-        <Link href="/blog" className="inline-flex items-center gap-2 text-sm text-[var(--color-text-muted)] hover:text-white mb-8">
+        <Link href="/blog" className="inline-flex items-center gap-2 text-sm text-[var(--color-text-muted)] hover:text-[var(--color-primary)] mb-8">
           <ArrowLeft className="w-4 h-4" /> Back to Blog
         </Link>
 
@@ -62,7 +62,7 @@ export default async function BlogDetailPage({
 
         <div className="flex flex-wrap gap-2 mt-10">
           {(Array.isArray(post.tags) ? post.tags : (typeof post.tags === 'string' ? post.tags.split(',') : [])).map((t: string) => (
-  <span key={t} className="text-xs bg-white/5 border border-[var(--color-border)] rounded-full px-3 py-1">
+  <span key={t} className="text-xs bg-[var(--color-surface)] border border-[var(--color-border)] rounded-full px-3 py-1">
     #{t}
   </span>
 ))}

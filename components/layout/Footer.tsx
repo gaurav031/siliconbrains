@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Rocket, Github, Linkedin, Mail, ArrowRight, Loader2, CheckCircle2 } from "lucide-react";
+import Image from "next/image";
+import { Github, Linkedin, Mail, ArrowRight, Loader2, CheckCircle2 } from "lucide-react";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -30,12 +31,12 @@ export default function Footer() {
       <div className="container-max py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
         <div className="md:col-span-2">
           <Link href="/" className="flex items-center gap-2 font-bold text-lg mb-4">
-            <Rocket className="w-5 h-5 text-[var(--color-primary)]" />
-            <span className="gradient-text">SiliconBrainsAI</span>
+            <Image src="/dark_logo.png" alt="SiliconBrain AI Logo" width={200} height={60} className="h-12 md:h-14 w-auto object-contain show-in-light" />
+            <Image src="/logo.png" alt="SiliconBrain AI Logo" width={200} height={60} className="h-12 md:h-14 w-auto object-contain show-in-dark" />
+            {/* <span className="gradient-text">SiliconBrain AI</span> */}
           </Link>
           <p className="text-sm text-[var(--color-text-muted)] max-w-sm mb-6">
-            Building artificial intelligence for autonomous satellites, spacecraft health
-            monitoring, digital twins, and the future of space intelligence.
+            Building AI products for space technology, Earth observation AI, computer vision for satellite imagery, and the future of satellite AI solutions.
           </p>
           <div className="flex gap-3">
             <a href="https://github.com/siliconbrainsai" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full glass glass-hover">
@@ -85,7 +86,7 @@ export default function Footer() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="you@company.com"
-              className="flex-1 min-w-0 bg-white/5 border border-[var(--color-border)] rounded-full px-4 py-2 text-sm outline-none focus:border-[var(--color-primary)]"
+              className="flex-1 min-w-0 bg-[var(--color-surface)] border border-[var(--color-border)] rounded-full px-4 py-2 text-sm outline-none focus:border-[var(--color-primary)]"
             />
             <button
               type="submit"
@@ -113,7 +114,7 @@ export default function Footer() {
 
       <div className="border-t border-[var(--color-border)] py-6">
         <div className="container-max flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-[var(--color-text-muted)]">
-          <p>© {new Date().getFullYear()} SiliconBrainsAI. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} SiliconBrain AI. All rights reserved.</p>
           <p>Built with Next.js, PostgreSQL & Prisma.</p>
         </div>
       </div>

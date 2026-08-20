@@ -5,11 +5,11 @@ import { Badge, GlassCard, SectionHeading } from "@/components/ui/Section";
 
 export const metadata: Metadata = {
   title: "Publications",
-  description: "Research papers, conference papers, technical whitepapers, case studies, books, and patents by SiliconBrainsAI.",
+  description: "Research papers, conference papers, technical whitepapers, case studies, books, and patents by SiliconBrain AI.",
 };
 
 const fallback = [
-  { id: "1", title: "Physics-Informed Deep Learning for Spacecraft Fault Classification", type: "Research Paper", authors: ["SiliconBrainsAI Research Team"], venue: "IAC", year: 2025, abstract: "A physics-informed neural architecture for spacecraft subsystem fault classification.", link: "#" },
+  { id: "1", title: "Physics-Informed Deep Learning for Spacecraft Fault Classification", type: "Research Paper", authors: ["SiliconBrain AI Research Team"], venue: "IAC", year: 2025, abstract: "A physics-informed neural architecture for spacecraft subsystem fault classification.", link: "#" },
 ];
 
 const categories = ["Research Papers", "Conference Papers", "Technical Whitepapers", "Case Studies", "Books", "Patents"];
@@ -39,7 +39,7 @@ export default async function PublicationsPage() {
 
       <div className="container-max flex flex-wrap gap-2 mb-12">
         {categories.map((c) => (
-          <span key={c} className="text-xs font-medium px-3 py-1.5 rounded-full bg-white/5 border border-[var(--color-border)] text-[var(--color-text-muted)]">
+          <span key={c} className="text-xs font-medium px-3 py-1.5 rounded-full bg-[var(--color-surface)] border border-[var(--color-border)] text-[var(--color-text-muted)]">
             {c}
           </span>
         ))}

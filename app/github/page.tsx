@@ -4,7 +4,7 @@ import { Badge, GlassCard, SectionHeading } from "@/components/ui/Section";
 
 export const metadata: Metadata = {
   title: "GitHub",
-  description: "Open source projects, repositories, and contributions from SiliconBrainsAI.",
+  description: "Open source projects, AI products repositories, and contributions from SiliconBrain AI.",
 };
 
 const GITHUB_ORG = "siliconbrainsai";

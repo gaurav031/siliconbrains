@@ -1,6 +1,6 @@
-# SiliconBrainsAI — Space AI Startup Website
+# SiliconBrain AI — Space AI Startup Website
 
-A production-ready, full-stack website for **SiliconBrainsAI**, built with:
+A production-ready, full-stack website for **SiliconBrain AI**, built with:
 
 - **Next.js 16** (App Router) + **TypeScript**
 - **Tailwind CSS v4**

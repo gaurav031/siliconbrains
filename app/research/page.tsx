@@ -5,7 +5,7 @@ import { Brain, Satellite, Radar, Cpu, Eye, Rocket, Sparkles, ShieldCheck, Netwo
 export const metadata: Metadata = {
   title: "Research",
   description:
-    "SiliconBrainsAI's research areas span Space AI, satellite telemetry, digital twins, computer vision, autonomous space systems, edge AI, and explainable AI.",
+    "SiliconBrain AI's research areas span Space AI, satellite telemetry, digital twins, computer vision, autonomous space systems, edge AI, and explainable AI.",
 };
 
 const researchAreas = [
@@ -33,7 +33,7 @@ export default function ResearchPage() {
     <div className="pt-32 pb-20">
       <div className="container-max mb-14">
         <Badge>Research</Badge>
-        <h1 className="text-4xl md:text-5xl font-bold mt-6 mb-6">Research at SiliconBrainsAI</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mt-6 mb-6">Research at SiliconBrain AI</h1>
         <p className="text-lg text-[var(--color-text-muted)] max-w-2xl leading-relaxed">
           We treat research as core infrastructure — every production system traces back
           to a rigorously validated hypothesis about how AI should behave in space.

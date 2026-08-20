@@ -5,7 +5,7 @@ import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Get in touch with SiliconBrainsAI for research, commercial, speaking, workshop, investment, or internship collaboration.",
+  description: "Get in touch with SiliconBrain AI for research, commercial AI product development, speaking, workshop, investment, or internship collaboration.",
 };
 
 export default function ContactPage() {
@@ -29,13 +29,13 @@ export default function ContactPage() {
           <GlassCard>
             <h3 className="font-semibold mb-4">Connect With Us</h3>
             <div className="space-y-3 text-sm">
-              <a href="mailto:contact@siliconbrainsai.com" className="flex items-center gap-3 text-[var(--color-text-muted)] hover:text-white transition-colors">
+              <a href="mailto:contact@siliconbrainsai.com" className="flex items-center gap-3 text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">
                 <Mail className="w-4 h-4" /> contact@siliconbrainsai.com
               </a>
-              <a href="https://github.com/siliconbrainsai" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-[var(--color-text-muted)] hover:text-white transition-colors">
+              <a href="https://github.com/siliconbrainsai" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">
                 <Github className="w-4 h-4" /> github.com/siliconbrainsai
               </a>
-              <a href="https://linkedin.com/company/siliconbrainsai" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-[var(--color-text-muted)] hover:text-white transition-colors">
+              <a href="https://linkedin.com/company/siliconbrainsai" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">
                 <Linkedin className="w-4 h-4" /> linkedin.com/company/siliconbrainsai
               </a>
             </div>
@@ -46,7 +46,7 @@ export default function ContactPage() {
               <MapPin className="w-4 h-4 text-[var(--color-cyan)]" />
               <h3 className="font-semibold">Location</h3>
             </div>
-            <div className="rounded-xl overflow-hidden aspect-video w-full bg-white/5 flex items-center justify-center text-xs text-[var(--color-text-muted)]">
+            <div className="rounded-xl overflow-hidden aspect-video w-full bg-[var(--color-surface)] flex items-center justify-center text-xs text-[var(--color-text-muted)]">
               Google Map Placeholder
             </div>
           </GlassCard>

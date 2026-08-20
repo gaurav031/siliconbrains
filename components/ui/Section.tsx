@@ -30,7 +30,7 @@ export function SectionHeading({
 
 export function Badge({ children }: { children: ReactNode }) {
   return (
-    <span className="inline-flex items-center text-xs font-medium px-3 py-1 rounded-full bg-white/5 border border-[var(--color-border)] text-[var(--color-text-muted)]">
+    <span className="inline-flex items-center text-xs font-medium px-3 py-1 rounded-full bg-[var(--color-surface)] border border-[var(--color-border)] text-[var(--color-text-muted)]">
       {children}
     </span>
   );

@@ -7,7 +7,7 @@ import { Badge, GlassCard } from "@/components/ui/Section";
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Explore SiliconBrainsAI's AI projects for space: satellite telemetry analytics, fault detection, predictive maintenance, digital twins, and autonomous decision engines.",
+    "Explore SiliconBrain AI's AI products for space technology: satellite image analysis, ship detection, Earth observation AI, and AI-powered satellite analytics.",
 };
 
 const fallbackProjects = [
@@ -40,8 +40,8 @@ export default async function ProjectsPage() {
         <Badge>Engineering</Badge>
         <h1 className="text-4xl md:text-5xl font-bold mt-6 mb-6">Projects</h1>
         <p className="text-lg text-[var(--color-text-muted)] max-w-2xl leading-relaxed">
-          AI systems engineered for spacecraft health, autonomy, and mission intelligence —
-          from telemetry analytics to fully autonomous decision engines.
+          AI products and systems engineered for space technology —
+          from computer vision for satellite imagery to maritime AI and ship detection.
         </p>
       </div>
 

@@ -2,50 +2,65 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.siliconbrainsai.com"),
   title: {
-    default: "SiliconBrainsAI — Building AI for Future Space Missions",
-    template: "%s | SiliconBrainsAI",
+    default: "SiliconBrain AI | Satellite AI Products & Space Technology",
+    template: "%s | SiliconBrain AI",
   },
   description:
-    "SiliconBrainsAI builds artificial intelligence for autonomous satellites, spacecraft health monitoring, digital twins, predictive maintenance, and space intelligence.",
+    "SiliconBrain AI develops advanced AI products and solutions for space technology. We specialize in AI-powered satellite analytics, satellite image analysis, ship detection, and computer vision for satellite imagery.",
   keywords: [
-    "Space AI",
+    "SiliconBrain AI",
+    "Silicon Brains AI",
+    "AI products",
+    "AI solutions",
     "Satellite AI",
-    "Spacecraft Health Monitoring",
-    "Digital Twin Satellite",
-    "Predictive Maintenance AI",
-    "Autonomous Satellites",
-    "ISRO AI collaboration",
-    "TinyML Space",
+    "satellite AI products",
+    "satellite imagery AI",
+    "AI satellite technology",
+    "space technology",
+    "AI for space technology",
+    "satellite image analysis",
+    "ship detection",
+    "AI ship detection",
+    "satellite-based ship detection",
+    "maritime AI",
+    "geospatial AI",
+    "Earth observation AI",
+    "AI-powered satellite analytics",
+    "computer vision for satellite imagery",
+    "AI for remote sensing"
   ],
-  authors: [{ name: "SiliconBrainsAI" }],
+  authors: [{ name: "SiliconBrain AI" }],
   openGraph: {
-    title: "SiliconBrainsAI — Building AI for Future Space Missions",
+    title: "SiliconBrain AI | AI for Space Technology & Satellite Analytics",
     description:
-      "Artificial Intelligence for Autonomous Satellites, Spacecraft Health Monitoring, Digital Twins, Predictive Maintenance, and Space Intelligence.",
+      "SiliconBrain AI specializes in AI products for space technology, satellite imagery AI, AI-powered satellite analytics, and satellite-based ship detection.",
     url: "https://www.siliconbrainsai.com",
-    siteName: "SiliconBrainsAI",
+    siteName: "SiliconBrain AI",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SiliconBrainsAI — Building AI for Future Space Missions",
+    title: "SiliconBrain AI | Satellite AI & Space Technology",
     description:
-      "Artificial Intelligence for Autonomous Satellites, Spacecraft Health Monitoring, Digital Twins & Space Intelligence.",
+      "Discover AI solutions for space technology, satellite image analysis, ship detection, and Earth observation AI by SiliconBrain AI.",
   },
   robots: { index: true, follow: true },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className="antialiased">
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+    <html lang="en" suppressHydrationWarning>
+      <body className="antialiased" suppressHydrationWarning>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

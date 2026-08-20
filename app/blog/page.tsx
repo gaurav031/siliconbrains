@@ -6,7 +6,7 @@ import { Badge, GlassCard, SectionHeading } from "@/components/ui/Section";
 
 export const metadata: Metadata = {
   title: "Blog",
-  description: "Technical blogs on AI, machine learning, space, satellites, research, Python, computer vision, and deep learning from SiliconBrainsAI.",
+  description: "Technical blogs on AI products, machine learning, Earth observation AI, satellites, research, satellite image analysis, computer vision, and deep learning from SiliconBrain AI.",
 };
 
 const categories = ["AI", "Machine Learning", "Space", "Satellite", "Research", "Python", "Computer Vision", "Deep Learning"];
@@ -41,7 +41,7 @@ export default async function BlogPage() {
 
       <div className="container-max flex flex-wrap gap-2 mb-12">
         {categories.map((c) => (
-          <span key={c} className="text-xs font-medium px-3 py-1.5 rounded-full bg-white/5 border border-[var(--color-border)] text-[var(--color-text-muted)]">
+          <span key={c} className="text-xs font-medium px-3 py-1.5 rounded-full bg-[var(--color-surface)] border border-[var(--color-border)] text-[var(--color-text-muted)]">
             {c}
           </span>
         ))}

@@ -38,7 +38,7 @@ export default function SpaceBackground() {
           width: 180,
           height: 180,
           background:
-            "radial-gradient(circle at 35% 35%, #4f7cff, #1a2a6c 55%, #05070d 100%)",
+            "radial-gradient(circle at 35% 35%, #4f7cff, #1a2a6c 55%, var(--color-bg) 100%)",
           boxShadow: "0 0 80px 10px rgba(79,124,255,0.35)",
         }}
         animate={{ rotate: 360 }}
@@ -49,7 +49,7 @@ export default function SpaceBackground() {
       {Array.from({ length: 18 }).map((_, i) => (
         <motion.div
           key={i}
-          className="absolute w-1 h-1 rounded-full bg-white/60"
+          className="absolute w-1 h-1 rounded-full bg-[var(--color-text)] opacity-60"
           style={{
             left: `${(i * 37) % 100}%`,
             top: `${(i * 53) % 100}%`,
